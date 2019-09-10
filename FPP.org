@@ -10,10 +10,11 @@
 #+LATEX_CLASS: article
 #+LATEX_CLASS_OPTIONS: [a4paper, 11pt, full, nointegrals, fleqn]
 
-#+LATEX_HEADER: \usepackage[spanish, es-nolists, es-noindentfirst, es-noshorthands]{babel}
-#+LATEX_HEADER: \usepackage{natbib}
+#+LATEX_HEADER: \usepackage[spanish, es-nolists, es-noindentfirst]{babel}
 #+LATEX_HEADER: \usepackage{kpfonts}
 #+LATEX_HEADER: \usepackage{geometry}
+#+LATEX_HEADER: \usepackage{array}
+#+LATEX_HEADER: \usepackage{booktabs}
 #+LATEX_HEADER: \usepackage{microtype}
 #+LATEX_HEADER: \geometry{scale=0.72}
 #+LATEX_HEADER: \DeclareUnicodeCharacter{00A0}{~}
@@ -70,45 +71,73 @@
     \[ L_C + L_P =  L^{\max} \]
   #+end_export
 
+- Cada actividad de producción puede representarse como una *función*
+  de la cantidad de horas dedicadas a esa actividad.
 
-
-- $L_C$ y $L_P$ son variables. Pueden tomar cualquier valor entre $0$ y $8$, siempre que se cumpla la restricción:
-  \[ L_C + L_P \leq 8 = L^{\max} \]
-
-- La producción en cada actividad es una *función* de la cantidad de horas que dedica a esa actividad.
   + Cocos: $C = f(L_C)$.
+
   + Pescado: $P = g(L_P)$.
 
-- Tablas presentación.
+- En estas funciones una *variable independiente*, $L_C$ o $L_P$,
+  determina el valor que toma la *variable dependiente*, $C$ o $P$,
+  respectivamente.
 
-- Representación gráfica.
+- En este caso las funciones reflejan una relación de *causa-efecto*:
+  si dedican más horas a pescar se obtiene más pescado.
 
-  + La producción en cada actividad es *creciente* con las horas de trabajo. Relación *positiva*, o *directa* entre dos variables.
+- Las funciones se pueden expresar como: tablas, gráficos y
+  expresiones algebraicas.
 
-  + La *pendiente* es positiva.
+- Tablas: proyectar tablas de la presentación.
 
-  + La producción de cocos se incrementa a la misma tasa siempre que incrementamos $L_C$ en 2 horas.
+- Representación gráfica: que hagan el gráfico usando las tablas.
 
-  + En el caso del pescado, conforme añadimos horas de trabajo, los incrementos de la producción son cada vez menores.
+  + ¿Qué variable se representa en cada eje? Normalmente la variable
+    independiente en abscisas y la dependiente en ordenadas; aunque nos
+    saltaremos la convención en los gráficos de oferta y demanda.
 
-- Función de producción de cocos:
+  + Etiquetar los ejes y las curvas.
+
+
+- Las dos funciones establecen una relación *directa* o *creciente* o
+  *positiva* entre las variables:
+
+  + Que añadan dos columnas a las tablas de producción con los
+    incrementos de las variables y comprueben que esos incrementos
+    tienen el mismo signo.
+
+  + Que comprueben que la *pendiente* de los gráficos es positiva.
+
+ - La función de producción de cocos es *lineal*: laproducción de
+   cocos se incrementa a la misma tasa siempre que incrementamos
+   $L_C$.
+
+ - En el caso del pescado, la función de producción es *no lineal*: la
+   tasa a la que aumenta la producción cambia conforme añadimos horas
+   de trabajo. Es una función *cóncava*: los incrementos de la
+   producción son cada vez menores.
+
+- Expresión algebraica de la función de producción de cocos:
   \[ C = L_C \]
 
   + *Función derivada*:
     \[ \frac{\diff C}{\diff L_C} = 1 \]
 
-  + *Función lineal*: La pendiente es constante: siempre es 1 kg de cocos por cada hora adicional de trabajo.
+  + *Función lineal*: La pendiente es constante: siempre es 1 kg de
+    cocos por cada hora adicional de trabajo.
 
   + *Función creciente*: la función derivada siempre toma valores positivos.
     \[ \frac{\diff C}{\diff L_C} = 1 > 0\]
 
-- Función de producción de pescado:
+- Expresión algebraica de la función de producción de pescado:
   \[ P = 2 \sqrt{L_P} = 2 L_P^{1/2} \]
+  [Recordadles que tienen que saber trabajar con potencias].
 
   + Función derivada:
     \[ \frac{\diff P}{\diff L_P} = 2 \cdot \frac{1}{2} L_P^{-1/2} = L_P^{-1/2} = \frac{1}{L_P^{1/2}}  \]
 
-  + *Función no lineal*: La pendiente es diferente en cada punto de la función de producción de pescado:
+  + *Función no lineal*: La pendiente es diferente en cada punto de la
+    función de producción de pescado:
 
     - $P = 2$:
      \[ \left.\frac{\diff P}{\diff L_P}\right|_{P=2} = \frac{1}{2^{1/2}} \approx \text{\ 0.71 kg de pescado por hora adicional.} \]
@@ -123,24 +152,30 @@
     \[ \frac{\diff C}{\diff L_C} = \frac{1}{L_P^{1/2}} > 0\]
 
   + *Concavidad*:
+
     - La pendiente disminuye conforme aumentamos $L_P$.
+
     - La función derivada es decreciente: la segunda derivada toma siempre valores negativos:
-    \[ \frac{\diff^2 C}{\diff L_C^2} = \frac{\diff L_P^{-1/2}}{\diff L_C} =  -\frac{1}{2} L_P^{-3/2} < 0\]
+      \[ \frac{\diff^2 C}{\diff L_C^2} = \frac{\diff L_P^{-1/2}}{\diff L_C} =  -\frac{1}{2} L_P^{-3/2} < 0\]
+
     - Las tangentes por encima de la función.
 
 
 
 ** Obtención de la FPP
-- ¿Qué combinaciones de cocos y pescado puede obtener Robinson si trabaja las 8 horas disponibles al día?
+- ¿Qué combinaciones de cocos y pescado puede obtener Robinson si
+  trabaja las 8 horas disponibles al día?
+
+- Con álgebra. Partimos de la restricción de las horas.
   \[ L_C + L_P = 8 \]
 
 - Invertimos las funciones de producción:
-  #+BEGIN_LaTeX
+  #+begin_export latex
   \begin{gather*}
     L_{C} = C \\
     L_{P} = P^{2}/ 4
   \end{gather*}
-  #+END_LaTeX
+  #+end_export
 
 - Sustituyendo en la restricción:
   \[ C + P^2 / 4 = 8  \]
@@ -155,7 +190,7 @@
   + Segunda derivada.
   + Concavidad: tangente por encima; segunda derivada.
 
-** Mejora tecnológica (para casa)
+** Mejora tecnológica (¿para casa?)
   - Sólo en la producción de pescado:
     + Nueva función de producción:
       \[ P = 3 L_P^{1/2} \]
@@ -163,42 +198,67 @@
       \[ C = 8 - P^2/9 \]
   - En los dos sectores:
     + Nuevas funciones de producción:
-      #+BEGIN_LaTeX
+      #+begin_export latex
         \begin{gather*}
           C = 1.2 L_c \\
           P = 3 L_{P}^{{1/2}}
         \end{gather*}
-      #+END_LaTeX
+      #+end_export
     + FPP:
       \[ C = 9.6 - 0.13333 P^2 \]
 
-** Más cosas (para casa)
+** Más cosas (¿para casa?)
   - ¿Qué ocurre si Robinson trabaja 10 horas?
 
 * Optimización
- - Un vendedor vende 1000 bolígrafos a la semana a un precio de 35 céntimos de €. Por su experiencia sabe que cada céntimo que sube el precio vende 100 bolígrafos menos a la semana. Por otro lado, cada bolígrafo le cuesta 19 céntimos. ¿Qué precio debería fijar si quiere maximizar sus beneficios? ¿Cuántos bolígrafos venderá a la semana? ¿Qué beneficios obtiene?
-   + Expresaremos los beneficios totales como el producto de bolis vendidos y beneficio por boli.
-   + Beneficio por boli (céntimos): $P - 19$.
-   + Bolis vendidos: cuando $P_0 = 35$ céntimos se venden $X_0 = 1000$ bolis a la semana. Por otro lado la pendiente es:
-     \[ \frac{\Delta X}{\Delta P} = -100 \]
-   + Con un punto y la pendiente podemos calcular la relación lineal:
-     \[ X - X_0 = \frac{\Delta X}{\Delta P} (P - P_0) \]
-   + En nuestro caso:
-     \[ X - 1000 = -100 (P - 35) \]
-   + Por tanto:
-     \[ X  = 4500 - 100 P \]
-   + Beneficios totales:
-     \[ \pi = (4500 - 100 P) (P - 19) = -100 P^2 + 6400 P - 85500 \]
-   + Gráfico:
 
-     [[./prof.pdf]]
+- Supongamos que Robinson quiere conseguir la mayor cantidad de kg
+  posible de comida, ya sean cocos o pescado.
 
-   + Derivada de los beneficios:
-     \[ \frac{\diff \pi}{\diff P}  = -200 P + 6400 \]
-   + Condición de primer orden
-     \[ \frac{\diff \pi}{\diff P}  = -200 P^* + 6400  = 0\]
-   + Precio óptimo: $P^* = 32$ céntimos.
-   + Condición de segundo orden: concavidad en un entorno del óptimo.
-     \[ \frac{\diff^2 \pi}{\diff P^2}  = -200  < 0\]
-   + Bolis vendidos: $X = 4500 - 100 \times 32 = 1300$ bolis a la semana.
-   + Beneficios: $\pi = 1300 \times (32 - 19) = 16900$ céntimos a la semana.
+- Que hagan una tabla más detallada de la FPP usando la fórmula que
+  han obtenido antes.
+  #+begin_export latex
+  \begin{center}
+  \begin{tabular}{*{4}{>{$}r<{$}}}
+    \toprule
+    L_P & L_C & P & C \\
+    \midrule
+    0 & 8 & 0.0 & 8 \\
+    1 & 7 & 2.0 & 7 \\
+    2 & 6 & 2.8 & 6 \\
+    3 & 5 & 3.5 & 5 \\
+    4 & 4 & 4.0 & 4 \\
+    5 & 3 & 4.5 & 3 \\
+    6 & 2 & 4.9 & 2 \\
+    7 & 1 & 5.3 & 1 \\
+    8 & 0 & 5.7 & 0 \\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+  #+end_export
+
+
+- Dos posibles formas de resolver:
+
+  + Optimización por niveles: Sumamos los kg de comida en cada posible
+    opción y seleccionamos la combinación con un mayor número de
+    kg. En la tabla de la FPP que añadan una columna $T$ donde sumen
+    los kilos totales de comida y que encuentren la fila con la mejor
+    opción.
+
+  + Optimización por diferencias (*análisis marginal*): calcular la
+    variación que se produce en el beneficio neto al cambiar de una
+    alternativa a otra. Aceptar el cambio mientras la variación del
+    beneficio sea positiva. Usando la tabla de la FPP: partir de la
+    opción en que $P=0$; que calculen cuanto variará $T$ si consumen
+    un kg más de pescado: $\Delta T = \Delta P + \Delta C$; que
+    continúen aumentando $P$ mientras $\Delta T > 0$.
+
+- Con álgebra. Función objetivo:
+  \[ T = P + C(P)  = P + 8 - P^2/4\]
+- Condición de primer orden:
+  \[ dT/dP = 1 - P^*/2 = 0 \]
+- Óptimo: $P^* = 2$, $C^* = 7$ y $T^* = 9$.
+- Condición de segundo orden:
+  \[ d^2 T / dP^2 = -1/2 < 0 \]
+  Por tanto es un máximo.
