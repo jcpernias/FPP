@@ -1,4 +1,6 @@
+# -*- ispell-dictionary: "spanish" -*-
 #+STARTUP: showall hidestars indent
+
 #+TITLE: Práctica 1
 #+AUTHOR: Introducción a la microeconomía
 #+DATE: Curso 2019--2020
