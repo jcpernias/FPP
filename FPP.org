@@ -1,0 +1,146 @@
+#+STARTUP: showall hidestars indent
+#+TITLE: Lab 1
+#+AUTHOR: Introducción a la microeconomía
+#+DATE: Curso 2015--2016
+
+#+OPTIONS: toc:nil  ^:{}
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper, 11pt, full, nointegrals, fleqn]
+
+#+LATEX_HEADER: \usepackage[spanish, es-nolists, es-noindentfirst, es-noshorthands]{babel}
+#+LATEX_HEADER: \usepackage{natbib}
+#+LATEX_HEADER: \usepackage{kpfonts}
+#+LATEX_HEADER: \usepackage{geometry}
+#+LATEX_HEADER: \usepackage{microtype}
+#+LATEX_HEADER: \geometry{scale=0.72}
+#+LATEX_HEADER: \DeclareUnicodeCharacter{00A0}{~}
+#+LATEX_HEADER: \usepackage{bookmark}
+#+LATEX_HEADER: \newcommand*{\diff}{\ensuremath{\mathrm{d}\;}}
+
+
+* La frontera de posibilidades de producción
+** La economía de Robinson Crusoe
+- Sistema económico simple: sólo hay un agente que actúa a la vez como productor y consumidor.
+- El problema económico que tiene que resolver es ¿qué producir?
+- Un primer paso para resolverlo es enumerar las alternativas que tiene a su disposición: la FPP.
+
+** Producción
+- *Escasez*: sólo dispone de 8 horas al día para trabajar:
+  \[ L^{\max} = 8 \]
+- Esas 8 horas las dedica a recoger cocos o a pescar:
+  + $L_C \geq 0$: horas recogiendo cocos.
+  + $L_P \geq 0$: horas pescando.
+- $L_C$ y $L_P$ son variables. Pueden tomar cualquier valor entre $0$ y $8$, siempre que se cumpla la restricción:
+  \[ L_C + L_P \leq 8 = L^{\max} \]
+- La producción en cada actividad es una *función* de la cantidad de horas que dedica a esa actividad.
+  + Cocos: $C = f(L_C)$.
+  + Pescado: $P = g(L_P)$.
+- Tablas presentación.
+- Representación gráfica. 
+  + La producción en cada actividad es *creciente* con las horas de trabajo. Relación *positiva*, o *directa* entre dos variables.
+  + La *pendiente* es positiva.
+  + La producción de cocos se incrementa a la misma tasa siempre que incrementamos $L_C$ en 2 horas.
+  + En el caso del pescado, conforme añadimos horas de trabajo, los incrementos de la producción son cada vez menores.
+- Función de producción de cocos:
+  \[ C = L_C \]
+  + *Función derivada*:
+    \[ \frac{\diff C}{\diff L_C} = 1 \]
+  + *Función lineal*: La pendiente es constante: siempre es 1 kg de cocos por cada hora adicional de trabajo.
+  + *Función creciente*: la función derivada siempre toma valores positivos.
+    \[ \frac{\diff C}{\diff L_C} = 1 > 0\]
+- Función de producción de pescado:
+  \[ P = 2 \sqrt{L_P} = 2 L_P^{1/2} \]
+  + Función derivada:
+    \[ \frac{\diff P}{\diff L_P} = 2 \cdot \frac{1}{2} L_P^{-1/2} = L_P^{-1/2} = \frac{1}{L_P^{1/2}}  \]
+  + *Función no lineal*: La pendiente es diferente en cada punto de la función de producción de pescado:
+    - $P = 2$:
+     \[ \left.\frac{\diff P}{\diff L_P}\right|_{P=2} = \frac{1}{2^{1/2}} \approx \text{\ 0.71 kg de pescado por hora adicional.} \]
+    - $P = 4$:
+     \[ \frac{\diff P(4)}{\diff L_P} = \frac{1}{4^{1/2}} = 0.5 \text{\ kg de pescado por hora adicional.} \]
+    - $P = 6$:
+     \[ \frac{\diff P(6)}{\diff L_P} = \frac{1}{6^{1/2}} \approx 0.41 \text{\ kg de pescado por hora adicional.} \]
+  + *Función creciente*: 
+    \[ \frac{\diff C}{\diff L_C} = \frac{1}{L_P^{1/2}} > 0\]
+  + *Concavidad*:
+    - La pendiente disminuye conforme aumentamos $L_P$.
+    - La función derivada es decreciente: la segunda derivada toma siempre valores negativos:
+    \[ \frac{\diff^2 C}{\diff L_C^2} = \frac{\diff L_P^{-1/2}}{\diff L_C} =  -\frac{1}{2} L_P^{-3/2} < 0\]
+    - Las tangentes por encima de la función.
+
+
+
+** Obtención de la FPP
+- ¿Qué combinaciones de cocos y pescado puede obtener Robinson si trabaja las 8 horas disponibles al día?
+  \[ L_C + L_P = 8 \]
+- Invertimos las funciones de producción:
+  #+BEGIN_LaTeX
+  \begin{gather*}
+    L_{C} = C \\
+    L_{P} = P^{2}/ 4
+  \end{gather*}
+  #+END_LaTeX
+- Sustituyendo en la restricción:
+  \[ C + P^2 / 4 = 8  \]
+- Frontera de posibilidades de producción:
+  \[ C = 8 - P^2/4 \]
+- Calcular: 
+  + Puntos de cortes con los ejes.
+  + Función derivada.
+  + Pendiente.
+  + Segunda derivada.
+  + Concavidad: tangente por encima; segunda derivada.
+
+** Mejora tecnológica (para casa)
+  - Sólo en la producción de pescado:
+    + Nueva función de producción:
+      \[ P = 3 L_P^{1/2} \]
+    + FPP:
+      \[ C = 8 - P^2/9 \]
+  - En los dos sectores:
+    + Nuevas funciones de producción:
+      #+BEGIN_LaTeX
+        \begin{gather*}
+          C = 1.2 L_c \\
+          P = 3 L_{P}^{{1/2}}
+        \end{gather*}
+      #+END_LaTeX
+    + FPP:
+      \[ C = 9.6 - 0.13333 P^2 \]
+
+** Más cosas (para casa)
+  - ¿Qué ocurre si Robinson trabaja 10 horas?
+
+* Optimización
+ - Un vendedor vende 1000 bolígrafos a la semana a un precio de 35 céntimos de €. Por su experiencia sabe que cada céntimo que sube el precio vende 100 bolígrafos menos a la semana. Por otro lado, cada bolígrafo le cuesta 19 céntimos. ¿Qué precio debería fijar si quiere maximizar sus beneficios? ¿Cuántos bolígrafos venderá a la semana? ¿Qué beneficios obtiene?  
+   + Expresaremos los beneficios totales como el producto de bolis vendidos y beneficio por boli.
+   + Beneficio por boli (céntimos): $P - 19$.
+   + Bolis vendidos: cuando $P_0 = 35$ céntimos se venden $X_0 = 1000$ bolis a la semana. Por otro lado la pendiente es:
+     \[ \frac{\Delta X}{\Delta P} = -100 \]
+   + Con un punto y la pendiente podemos calcular la relación lineal:
+     \[ X - X_0 = \frac{\Delta X}{\Delta P} (P - P_0) \]
+   + En nuestro caso:
+     \[ X - 1000 = -100 (P - 35) \]
+   + Por tanto:
+     \[ X  = 4500 - 100 P \]
+   + Beneficios totales:
+     \[ \pi = (4500 - 100 P) (P - 19) = -100 P^2 + 6400 P - 85500 \]
+   + Gráfico:
+
+     [[./prof.pdf]]
+
+   + Derivada de los beneficios:
+     \[ \frac{\diff \pi}{\diff P}  = -200 P + 6400 \]
+   + Condición de primer orden
+     \[ \frac{\diff \pi}{\diff P}  = -200 P^* + 6400  = 0\]
+   + Precio óptimo: $P^* = 32$ céntimos.
+   + Condición de segundo orden: concavidad en un entorno del óptimo.
+     \[ \frac{\diff^2 \pi}{\diff P^2}  = -200  < 0\]
+   + Bolis vendidos: $X = 4500 - 100 \times 32 = 1300$ bolis a la semana.
+   + Beneficios: $\pi = 1300 \times (32 - 19) = 16900$ céntimos a la semana.
+
+
+
+
+
+     
