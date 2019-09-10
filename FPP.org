@@ -1,7 +1,7 @@
 #+STARTUP: showall hidestars indent
-#+TITLE: Lab 1
+#+TITLE: Práctica 1
 #+AUTHOR: Introducción a la microeconomía
-#+DATE: Curso 2015--2016
+#+DATE: Curso 2019--2020
 
 #+OPTIONS: toc:nil  ^:{}
 
@@ -37,7 +37,7 @@
   + Cocos: $C = f(L_C)$.
   + Pescado: $P = g(L_P)$.
 - Tablas presentación.
-- Representación gráfica. 
+- Representación gráfica.
   + La producción en cada actividad es *creciente* con las horas de trabajo. Relación *positiva*, o *directa* entre dos variables.
   + La *pendiente* es positiva.
   + La producción de cocos se incrementa a la misma tasa siempre que incrementamos $L_C$ en 2 horas.
@@ -60,7 +60,7 @@
      \[ \frac{\diff P(4)}{\diff L_P} = \frac{1}{4^{1/2}} = 0.5 \text{\ kg de pescado por hora adicional.} \]
     - $P = 6$:
      \[ \frac{\diff P(6)}{\diff L_P} = \frac{1}{6^{1/2}} \approx 0.41 \text{\ kg de pescado por hora adicional.} \]
-  + *Función creciente*: 
+  + *Función creciente*:
     \[ \frac{\diff C}{\diff L_C} = \frac{1}{L_P^{1/2}} > 0\]
   + *Concavidad*:
     - La pendiente disminuye conforme aumentamos $L_P$.
@@ -84,7 +84,7 @@
   \[ C + P^2 / 4 = 8  \]
 - Frontera de posibilidades de producción:
   \[ C = 8 - P^2/4 \]
-- Calcular: 
+- Calcular:
   + Puntos de cortes con los ejes.
   + Función derivada.
   + Pendiente.
@@ -112,7 +112,7 @@
   - ¿Qué ocurre si Robinson trabaja 10 horas?
 
 * Optimización
- - Un vendedor vende 1000 bolígrafos a la semana a un precio de 35 céntimos de €. Por su experiencia sabe que cada céntimo que sube el precio vende 100 bolígrafos menos a la semana. Por otro lado, cada bolígrafo le cuesta 19 céntimos. ¿Qué precio debería fijar si quiere maximizar sus beneficios? ¿Cuántos bolígrafos venderá a la semana? ¿Qué beneficios obtiene?  
+ - Un vendedor vende 1000 bolígrafos a la semana a un precio de 35 céntimos de €. Por su experiencia sabe que cada céntimo que sube el precio vende 100 bolígrafos menos a la semana. Por otro lado, cada bolígrafo le cuesta 19 céntimos. ¿Qué precio debería fijar si quiere maximizar sus beneficios? ¿Cuántos bolígrafos venderá a la semana? ¿Qué beneficios obtiene?
    + Expresaremos los beneficios totales como el producto de bolis vendidos y beneficio por boli.
    + Beneficio por boli (céntimos): $P - 19$.
    + Bolis vendidos: cuando $P_0 = 35$ céntimos se venden $X_0 = 1000$ bolis a la semana. Por otro lado la pendiente es:
@@ -138,9 +138,3 @@
      \[ \frac{\diff^2 \pi}{\diff P^2}  = -200  < 0\]
    + Bolis vendidos: $X = 4500 - 100 \times 32 = 1300$ bolis a la semana.
    + Beneficios: $\pi = 1300 \times (32 - 19) = 16900$ céntimos a la semana.
-
-
-
-
-
-     
